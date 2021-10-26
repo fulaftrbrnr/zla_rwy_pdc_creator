@@ -27,12 +27,10 @@ new_pdc_str := "
 )"
 
 cfg_name := "vSTARSConfig.xml"
-;cfg_path := File.join(File.dirname(__FILE__), cfg_name)
 temp_name := "temp"
-;temp_path = File.join(File.dirname(__FILE__), temp_name)
 bkp_name := cfg_name . ".bkp"
 FileCopy, %cfg_name%, %bkp_name%, 1
-MsgBox, Config File Backup created at %bkp_name%
+MsgBox, Config File Backup created at %A_WorkingDir%\%bkp_name%
 f := FileOpen(cfg_name, "r")
 t := FileOpen(temp_name, "w")
 
